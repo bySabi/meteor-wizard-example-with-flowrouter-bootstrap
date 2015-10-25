@@ -1,0 +1,20 @@
+<head>
+  <title>Autoform-wizard example app</title>
+</head>
+
+<template name="layout">
+  <div class="main container">
+    <h1>Autoform-wizard example app</h1>
+
+  <nav class="navbar navbar-inverse purple">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="{{pathFor route='basic'}}">Basic</a></li>
+        <li><a href="{{pathFor route='dynamic'}}">Dynamic</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    {{> Template.dynamic template=area}}
+  </div>
+</template>

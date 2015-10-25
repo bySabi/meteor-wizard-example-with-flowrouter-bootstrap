@@ -1,0 +1,8 @@
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+dump
+settings.json
+.idea
+**/.npm
+packages
