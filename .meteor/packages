@@ -1,0 +1,30 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+accounts-password
+less
+twbs:bootstrap
+aldeed:autoform
+aldeed:collection2
+momentjs:moment
+kadira:flow-router
+kadira:blaze-layout
+arillo:flow-router-helpers
+forwarder:autoform-wizard@0.8.0
+forwarder:autoform-wizard-flow-router
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
