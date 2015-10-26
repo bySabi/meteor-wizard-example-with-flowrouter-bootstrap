@@ -41,6 +41,14 @@
   content: '';
 }
 
+.loop-width(@i) when (@i > 0) {
+  .loop-width((@i - 1));
+  &:first-child:nth-last-child(@{i}),
+  &:first-child:nth-last-child(@{i}) ~ li{
+    width: (100% / @i);
+  }
+}
+
 //===============================================
 // Class Def
 //===============================================
@@ -88,6 +96,7 @@ ul.nav-wizard {
     margin: 0;
     font-size: 16px;
     line-height: @row-height;
+    .loop-width(8); // up to 8 <li>
     a {
       color: @complete-color;
       padding: 0;
@@ -120,17 +129,4 @@ ul.nav-wizard {
       .li-color(@incomplete-color, @incomplete-background);
     }
   }
-  .loop-li (@i, @selector: ~"li:first-child:nth-last-child(@{i}), li:first-child:nth-last-child(@{i}) ~ li") when (@i > 0) {
-    @{selector} {
-      width: 100% / @i;
-    }
-    @next-i: @i - 1;
-    & when (@next-i = 1) {
-      .loop-li (@next-i, @selector: ~"li:first-child:nth-last-child(@{next-i})");
-    }
-    & when (@next-i > 1) {
-      .loop-li (@next-i);
-    }
-  }
-  .loop-li (8); // -> up to 8 <li>
 }
